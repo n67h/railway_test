@@ -24,12 +24,12 @@
     <form action="" method="post">
         <label for="name">ID: </label>
         <input type="text" name="id" id="id">
-        <br>
+        <br><br>
 
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
-        <br>
-        
+        <br><br>
+
         <button type="submit" name="submit">Submit</button>
     </form>
 </body>
