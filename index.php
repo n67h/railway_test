@@ -19,10 +19,12 @@
     <title>Home</title>
 </head>
 <body>
+
     <form action="" method="post">
         <label for="name">Your name: </label>
         <input type="text" name="name" id="name">
         <button type="submit" name="submit">Submit</button>
     </form>
+    
 </body>
 </html>
