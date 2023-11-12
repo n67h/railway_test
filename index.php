@@ -3,7 +3,9 @@
 
     if(isset($_POST['submit'])){
         $name = mysqli_real_escape_string($conn, $_POST['name']);
-        $query = "INSERT INTO names (full_name) VALUES ('$name');";
+        $id = mysqli_real_escape_string($conn, $_POST['id']);
+
+        $query = "INSERT INTO names (id, full_name) VALUES ('$id', '$name');";
         $result = mysqli_query($conn, $query);
         if($result){
             header('location: index.php?submitted');
@@ -20,8 +22,14 @@
 </head>
 <body>
     <form action="" method="post">
-        <label for="name">Your name: </label>
+        <label for="name">ID: </label>
+        <input type="text" name="id" id="id">
+        <br>
+
+        <label for="name">Name: </label>
         <input type="text" name="name" id="name">
+        <br>
+        
         <button type="submit" name="submit">Submit</button>
     </form>
 </body>
